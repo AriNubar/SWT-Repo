@@ -1,4 +1,36 @@
 <changelog><commit>
+					<time>1462829736</time>
+					<sha1>59dd1db10ff9149939dd8a1def8604f3a5002e30</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master</branches>
+					<msg>Added maven-jar-plugin.</msg>
+				</commit><commit>
+					<time>1462829474</time>
+					<sha1>57f16dc21c15ab4c26da979d2b9e2382e230ef7c</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master</branches>
+					<msg>Copied files from the test project.</msg>
+				</commit><commit>
+					<time>1462829247</time>
+					<sha1>16b825d165cf706f70b7456158ecfcb4c04dd693</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master</branches>
+					<msg>Applied Patch</msg>
+				</commit><commit>
+					<time>1462829125</time>
+					<sha1>e1f14e842b0aa3c6b0e9900c13a376a9d1bbea19</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master</branches>
+					<msg>Created module JMJRST &amp; Exported repository from SVN</msg>
+				</commit><commit>
+					<time>1462828778</time>
+					<sha1>b13dff31ceab3698bea8f4c03707379ea6f1159f</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master</branches>
+					<msg>- Created Maven Project
+- Added src.xml file
+- Updated repositories</msg>
+				</commit><commit>
 					<time>1462828074</time>
 					<sha1>11d0298686546e574df84a599819f25a5613ecda</sha1>
 					<author>Ari Nubar Boyacıoğlu</author>
