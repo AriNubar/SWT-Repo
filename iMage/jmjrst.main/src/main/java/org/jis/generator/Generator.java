@@ -720,6 +720,10 @@ public class Generator {
   public BufferedImage rotateImage(BufferedImage image, double rotate)
   {
     if (rotate == 0) return image;
+    
+    if (image == null) {
+    	throw new NullPointerException("Null images cannot be rotated.");
+    }
 
     AffineTransform transform = new AffineTransform();
 
