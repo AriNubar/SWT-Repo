@@ -32,7 +32,14 @@ public class GeneratorTest {
 	public void nullImageTest() {
 		BufferedImage image1 = null;
 		BufferedImage rotatedImage = generator.rotateImage(image1, 0.0);
-		assertTrue(image1 == rotatedImage);
+		assertEquals(image1, rotatedImage);
 	}
+	
+	@Test
+	public void rotateZeroDegreeTest() {
+		BufferedImage rotatedImage = generator.rotateImage(bufferedImage, 0.0);
+		assertEquals(bufferedImage, rotatedImage);
+	}
+	
 
 }
