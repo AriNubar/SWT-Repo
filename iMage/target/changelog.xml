@@ -1,0 +1,13 @@
+<changelog><commit>
+					<time>1462828074</time>
+					<sha1>11d0298686546e574df84a599819f25a5613ecda</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master</branches>
+					<msg>Added .gitignore.</msg>
+				</commit><commit>
+					<time>1462827037</time>
+					<sha1>385c3b012fc39084ae5920c73000088d04f1a757</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master</branches>
+					<msg>first commit</msg>
+				</commit></changelog>
