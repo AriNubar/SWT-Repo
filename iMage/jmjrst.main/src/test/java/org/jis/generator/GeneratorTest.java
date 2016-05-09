@@ -45,6 +45,10 @@ public class GeneratorTest {
 		generator.rotateImage(bufferedImage, 1.0);
 	}
 	
+	@Test(expected = NullPointerException.class)
+	public void nullPointerExceptionTest() {
+		generator.rotateImage(null, 1.0);
+	}
 	
 
 }
