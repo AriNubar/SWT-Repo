@@ -29,8 +29,10 @@ public class GeneratorTest {
 	}
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void nullImageTest() {
+		BufferedImage image1 = null;
+		BufferedImage rotatedImage = generator.rotateImage(image1, 0.0);
+		assertTrue(image1 == rotatedImage);
 	}
 
 }
