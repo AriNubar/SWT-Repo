@@ -40,6 +40,11 @@ public class GeneratorTest {
 		BufferedImage rotatedImage = generator.rotateImage(bufferedImage, 0.0);
 		assertEquals(bufferedImage, rotatedImage);
 	}
+	@Test(expected = IllegalArgumentException.class)
+	public void illegalArgumentExceptionTest() {
+		generator.rotateImage(bufferedImage, 1.0);
+	}
+	
 	
 
 }
