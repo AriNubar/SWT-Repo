@@ -50,5 +50,27 @@ public class GeneratorTest {
 		generator.rotateImage(null, 1.0);
 	}
 	
+	@Test
+	public void test90(){
+	int height = bufferedImage.getHeight();
+	int width = bufferedImage.getWidth();
+	
+	bufferedImage = generator.rotateImage(bufferedImage, Generator.ROTATE_90);
+	
+	assertEquals(bufferedImage.getHeight(), width);
+	assertEquals(bufferedImage.getWidth(), height);
+	}
+	
+	@Test
+	public void test270(){
+	int height = bufferedImage.getHeight();
+	int width = bufferedImage.getWidth();
+	
+	bufferedImage = generator.rotateImage(bufferedImage, Generator.ROTATE_270);
+	
+	assertEquals(bufferedImage.getHeight(), width);
+	assertEquals(bufferedImage.getWidth(), height);
+	}
+	
 
 }
