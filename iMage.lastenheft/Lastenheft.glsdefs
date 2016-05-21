@@ -1,0 +1,180 @@
+\ifglsentryexists{Kunde}{}%
+{%
+\gls@defglossaryentry{Kunde}%
+{%
+name={Kunde},%
+sort={Kunde},%
+type={main},%
+first={Kunde},%
+firstplural={Kunden},%
+text={Kunde},%
+plural={Kunden},%
+description={Person, die [regelmäßig] eine Ware kauft oder eine Dienstleistung in Anspruch nimmt},%
+descriptionplural={Person, die [regelmäßig] eine Ware kauft oder eine Dienstleistung in Anspruch nimmt},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Mitarbeiter}{}%
+{%
+\gls@defglossaryentry{Mitarbeiter}%
+{%
+name={Mitarbeiter},%
+sort={Mitarbeiter},%
+type={main},%
+first={Mitarbeiter},%
+firstplural={Mitarbeiter},%
+text={Mitarbeiter},%
+plural={Mitarbeiter},%
+description={Angehöriger eines Betriebes, Unternehmens},%
+descriptionplural={Angehöriger eines Betriebes, Unternehmens},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Computer}{}%
+{%
+\gls@defglossaryentry{Computer}%
+{%
+name={Computer},%
+sort={Computer},%
+type={main},%
+first={Computer},%
+firstplural={Computers},%
+text={Computer},%
+plural={Computers},%
+description={Gerät zur Verarbeitung zur Daten, das die Daten einlesen, verarbeiten, speichern und ausgeben kann},%
+descriptionplural={Gerät zur Verarbeitung zur Daten, das die Daten einlesen, verarbeiten, speichern und ausgeben kann},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Tablett}{}%
+{%
+\gls@defglossaryentry{Tablett}%
+{%
+name={Tablett},%
+sort={Tablett},%
+type={main},%
+first={Tablett},%
+firstplural={Tabletts},%
+text={Tablett},%
+plural={Tabletts},%
+description={Ein tragbarer, flacher Computer in besonders leichter Ausführung mit einem Touchscreen, aber, anders als bei Notebooks, ohne ausklappbare mechanische Tastatur.},%
+descriptionplural={Ein tragbarer, flacher Computer in besonders leichter Ausführung mit einem Touchscreen, aber, anders als bei Notebooks, ohne ausklappbare mechanische Tastatur.},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Smartphone}{}%
+{%
+\gls@defglossaryentry{Smartphone}%
+{%
+name={Smartphone},%
+sort={Smartphone},%
+type={main},%
+first={Smartphone},%
+firstplural={Smartphones},%
+text={Smartphone},%
+plural={Smartphones},%
+description={Mobiltelefon, das erheblich umfangreichere Computer-Funktionalitäten und -konnektivität als ein herkömmliches „reines“ Mobiltelefon zur Verfügung stellt.},%
+descriptionplural={Mobiltelefon, das erheblich umfangreichere Computer-Funktionalitäten und -konnektivität als ein herkömmliches „reines“ Mobiltelefon zur Verfügung stellt.},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Support-Ticketsystem}{}%
+{%
+\gls@defglossaryentry{Support-Ticketsystem}%
+{%
+name={Support-Ticketsystem},%
+sort={Support-Ticketsystem},%
+type={main},%
+first={Support-Ticketsystem},%
+firstplural={Support-Ticketsystems},%
+text={Support-Ticketsystem},%
+plural={Support-Ticketsystems},%
+description={eine Art von Software, um Empfang, Bestätigung, Klassifizierung und Bearbeitung von Kundenanfragen zu handhaben},%
+descriptionplural={eine Art von Software, um Empfang, Bestätigung, Klassifizierung und Bearbeitung von Kundenanfragen zu handhaben},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%

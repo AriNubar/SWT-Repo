@@ -27,7 +27,6 @@ public class GeneratorTest {
 		try {
 			bufferedImage = ImageIO.read(new File("src/test/resources/picture.jpg"));
 		} catch (IOException e) {
-			System.out.println(e.getMessage());
 		}
 	}
 

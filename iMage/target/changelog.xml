@@ -1,32 +1,100 @@
 <changelog><commit>
+					<time>1462833809</time>
+					<sha1>89f11325c6d5cf289d1d8302819f14e500109dd6</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<msg>Added an if statement for the nullPointerExceptionTest
+Also added a patch file according to this.</msg>
+				</commit><commit>
+					<time>1462833552</time>
+					<sha1>684f1291e41e0e80627341fdca750cd37045371b</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<msg>Fixed test90() and test270()
+Added tearDown().</msg>
+				</commit><commit>
+					<time>1462832905</time>
+					<sha1>e95bb13d9df7f4f600a559ff689d55d45f2054c1</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<msg>Added test90()
+Added test270().</msg>
+				</commit><commit>
+					<time>1462832421</time>
+					<sha1>3e92f065d8018eba28aa236b502b10365b180a50</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<msg>Added nullPointerExceptionTest().</msg>
+				</commit><commit>
+					<time>1462832322</time>
+					<sha1>26ad4ce8f0d52d4d0d48298958ab5ca3782b4141</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<msg>Added illegalArgumentExceptionTest().</msg>
+				</commit><commit>
+					<time>1462831875</time>
+					<sha1>5fc0ab4c4ab608a5c468795ca00bf29dd1f3d96e</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<msg>Fixed nullImageTest()
+Added rotateZeroDegreeTest().</msg>
+				</commit><commit>
+					<time>1462831415</time>
+					<sha1>c7b7a5a46031dd85b0709421937980daec812936</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<msg>Added nullImageTest().</msg>
+				</commit><commit>
+					<time>1462831120</time>
+					<sha1>7d55794bc9e1c3054573f60babbf36e3df8325de</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<msg>Created GeneratorTest.java
+Added setUp() method in GeneratorTest.
+Added picture.jpg</msg>
+				</commit><commit>
+					<time>1462830447</time>
+					<sha1>0f790dc52cdf68c0decfa68b7daca5fc32170893</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<msg>Added JUnit dependency in pom.xml.</msg>
+				</commit><commit>
+					<time>1462830225</time>
+					<sha1>b57a4001f25ed1d3a780b93435ee4affa706a245</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<msg>Added Checkstyle.
+Fixed bracket positioning in Messages.java lines 51, 53, 55, 57.
+Packaged iMage and jmjrst.main.</msg>
+				</commit><commit>
 					<time>1462829736</time>
 					<sha1>59dd1db10ff9149939dd8a1def8604f3a5002e30</sha1>
 					<author>Ari Nubar Boyacıoğlu</author>
-					<branches>refs/heads/master</branches>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
 					<msg>Added maven-jar-plugin.</msg>
 				</commit><commit>
 					<time>1462829474</time>
 					<sha1>57f16dc21c15ab4c26da979d2b9e2382e230ef7c</sha1>
 					<author>Ari Nubar Boyacıoğlu</author>
-					<branches>refs/heads/master</branches>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
 					<msg>Copied files from the test project.</msg>
 				</commit><commit>
 					<time>1462829247</time>
 					<sha1>16b825d165cf706f70b7456158ecfcb4c04dd693</sha1>
 					<author>Ari Nubar Boyacıoğlu</author>
-					<branches>refs/heads/master</branches>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
 					<msg>Applied Patch</msg>
 				</commit><commit>
 					<time>1462829125</time>
 					<sha1>e1f14e842b0aa3c6b0e9900c13a376a9d1bbea19</sha1>
 					<author>Ari Nubar Boyacıoğlu</author>
-					<branches>refs/heads/master</branches>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
 					<msg>Created module JMJRST &amp; Exported repository from SVN</msg>
 				</commit><commit>
 					<time>1462828778</time>
 					<sha1>b13dff31ceab3698bea8f4c03707379ea6f1159f</sha1>
 					<author>Ari Nubar Boyacıoğlu</author>
-					<branches>refs/heads/master</branches>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
 					<msg>- Created Maven Project
 - Added src.xml file
 - Updated repositories</msg>
@@ -34,12 +102,12 @@
 					<time>1462828074</time>
 					<sha1>11d0298686546e574df84a599819f25a5613ecda</sha1>
 					<author>Ari Nubar Boyacıoğlu</author>
-					<branches>refs/heads/master</branches>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
 					<msg>Added .gitignore.</msg>
 				</commit><commit>
 					<time>1462827037</time>
 					<sha1>385c3b012fc39084ae5920c73000088d04f1a757</sha1>
 					<author>Ari Nubar Boyacıoğlu</author>
-					<branches>refs/heads/master</branches>
+					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
 					<msg>first commit</msg>
 				</commit></changelog>

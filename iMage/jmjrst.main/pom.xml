@@ -8,7 +8,7 @@
 	</parent>
 	<artifactId>1960732</artifactId>
 	<name>JMJRST</name>
-	<groupId>swt.ub1.a1</groupId>
+	<groupId>swt1.ub1.a3</groupId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
 		<plugins>
