@@ -1,4 +1,59 @@
 <changelog><commit>
+					<time>1463963590</time>
+					<sha1>9ad001b97fd1a363803e6647a1adfb16dad6624a</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master</branches>
+					<msg>Created FilterTest.java</msg>
+				</commit><commit>
+					<time>1463963550</time>
+					<sha1>1b657e1626ac165054dadd1409d6e57d536cd9da</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master</branches>
+					<msg>Created Sobel and Prewitt filters.</msg>
+				</commit><commit>
+					<time>1463963506</time>
+					<sha1>701f5c2603aed3850ffd8fcd7689db4b04145c39</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master</branches>
+					<msg>Created BlurFilter.java</msg>
+				</commit><commit>
+					<time>1463963461</time>
+					<sha1>158c359312aba666103d35bf5837d08ccfe7f1af</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master</branches>
+					<msg>Created LowerThreshHolder.java</msg>
+				</commit><commit>
+					<time>1463963363</time>
+					<sha1>cc5c20f5a60f13de2f59c78a900c3405ed12dcbb</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master</branches>
+					<msg>Added checkstyle, created GrayScaleFilter.java</msg>
+				</commit><commit>
+					<time>1463917119</time>
+					<sha1>0e2db57d6048dd349006757ac095fb49e51686e9</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master</branches>
+					<msg>Added patterns for assignments 4 and 5</msg>
+				</commit><commit>
+					<time>1463872052</time>
+					<sha1>437ebf4f67828796f9ad1941dcfb0223262e26ab</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master</branches>
+					<msg>Deleted iMage edge detection class pattern.</msg>
+				</commit><commit>
+					<time>1463871276</time>
+					<sha1>21eb340e19e6d1af3caf6491216bd9a6f567055c</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master</branches>
+					<msg>Added iMage edge detection class pattern.</msg>
+				</commit><commit>
+					<time>1463870421</time>
+					<sha1>1ad59cfb3f87da3fba4ae85639964a5a72e06110</sha1>
+					<author>Ari Nubar Boyacıoğlu</author>
+					<branches>refs/heads/master</branches>
+					<msg>Packaged jmjrst.main,
+Added Lastenheft.</msg>
+				</commit><commit>
 					<time>1462833809</time>
 					<sha1>89f11325c6d5cf289d1d8302819f14e500109dd6</sha1>
 					<author>Ari Nubar Boyacıoğlu</author>

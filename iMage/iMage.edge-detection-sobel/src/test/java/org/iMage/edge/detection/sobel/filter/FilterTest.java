@@ -18,9 +18,7 @@ public class FilterTest {
 
 	private BufferedImage bufferedImage;
 
-	 private File file = new File("src/test/resources/camera_obscura.png");
-	// private File file = new File("src/test/resources/cancel.png");
-	// private File file = new File("src/test/resources/a.png");
+	private File file = new File("src/test/resources/camera_obscura.png");
 	private File fileCopy = new File("src/test/resources/copy.png");
 
 	@Before
