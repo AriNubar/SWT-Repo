@@ -12,6 +12,9 @@ import java.util.ServiceLoader;
  */
 public final class PluginManager {
 
+	private static ServiceLoader<JmjrstPlugin> serviceLoader = ServiceLoader.load(JmjrstPlugin.class);
+	private static List<JmjrstPlugin> pluginList = new ArrayList<>();
+
 	/**
 	 * No constructor for utility class.
 	 */
@@ -23,8 +26,17 @@ public final class PluginManager {
 	 *         ascending order.
 	 */
 	public static List<JmjrstPlugin> getPlugins() {
-		// TODO Implement me!
 		
-		return null;
+
+		for (JmjrstPlugin plugin : serviceLoader) {
+			
+			if (plugin.isConfigurable()) {
+				pluginList.add(plugin);	
+			}
+			
+		}
+		Collections.sort(pluginList);
+			
+		return pluginList;
 	}
 }

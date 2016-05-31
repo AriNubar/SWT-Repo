@@ -54,7 +54,7 @@ public class Options implements Serializable {
   private float                quality             = 0.80F;
   private int                  modus               = 2;                                                 // Width
   private int                  hmax                = 1024;                                              // Width
-  private int                  vmax                = 768;                                               // Heigth
+  private int                  vmax                = 768;                                               // Height
   private int                  gallerieWidth       = 4;
   private int                  gallerieHeigth      = 4;
   private int                  background_r        = 0;

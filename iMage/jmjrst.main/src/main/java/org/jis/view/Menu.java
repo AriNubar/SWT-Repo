@@ -16,6 +16,8 @@
 package org.jis.view;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.ImageIcon;
 import javax.swing.JMenu;
@@ -23,6 +25,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.UIManager;
 
+import org.iMage.plugins.JmjrstPlugin;
+import org.iMage.plugins.PluginManager;
 import org.jis.Main;
 import org.jis.listner.MenuListner;
 
@@ -59,6 +63,7 @@ public class Menu extends JMenuBar {
     JMenu datei = new JMenu(m.mes.getString("Menu.0"));
     JMenu option = new JMenu(m.mes.getString("Menu.1"));
     JMenu optionen_look = new JMenu(m.mes.getString("Menu.2"));
+    JMenu swt = new JMenu("SWT-1");
     JMenu about = new JMenu(m.mes.getString("Menu.3"));
 
     gener = new JMenuItem(m.mes.getString("Menu.4"));
@@ -91,6 +96,7 @@ public class Menu extends JMenuBar {
     update_check = new JMenuItem(m.mes.getString("Menu.15"));
     url = ClassLoader.getSystemResource("icons/system-software-update.png");
     update_check.setIcon(new ImageIcon(url));
+    
 
     look_windows = new JMenuItem(m.mes.getString("Menu.8"));
     look_windows_classic = new JMenuItem(m.mes.getString("Menu.9"));
@@ -102,6 +108,13 @@ public class Menu extends JMenuBar {
     gener.setEnabled(false);
     zippen.setEnabled(false);
     gallerie.setEnabled(false);
+    
+    List<JmjrstPlugin> plugins = PluginManager.getPlugins();
+    for (JmjrstPlugin a : plugins) {
+    	String name = a.getName();
+    	swt.add(name);
+    	swt.addSeparator();
+    }
 
     datei.add(gener);
     datei.add(zippen);
@@ -115,7 +128,9 @@ public class Menu extends JMenuBar {
     about.add(info);
     this.add(datei);
     this.add(option);
+    this.add(swt);
     this.add(about);
+
 
     MenuListner al = new MenuListner(m, this);
     exit.addActionListener(al);
