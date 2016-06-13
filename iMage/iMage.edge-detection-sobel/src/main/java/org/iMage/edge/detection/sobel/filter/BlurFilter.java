@@ -7,112 +7,91 @@ import org.iMage.edge.detection.base.ImageFilter;
 
 /**
  * Implements the blur filter as requested on worksheet 2.
+ * 
+ * @author Mathias Landhäußer (swt1@ipd.kit.edu)
+ * @version 1.0
  */
 public class BlurFilter implements ImageFilter {
+  // final float[] matrix = { 1 / 16f, 1 / 8f, 1 / 16f, 1 / 8f, 1 / 4f, 1 / 8f,
+  // 1 / 16f, 1 / 8f, 1 / 16f, };
+  final double[] matrix = { 1 / 9f, 1 / 9f, 1 / 9f, 1 / 9f, 1 / 9f, 1 / 9f, 1 / 9f, 1 / 9f, 1 / 9f, };
+  final int mLength = (int) Math.sqrt(matrix.length) / 2;
 
-	private int red = 0;
-	private int green = 0;
-	private int blue = 0;
+  /*
+   * (non-Javadoc)
+   *
+   * @see
+   * edu.kit.ipd.swt1.jmjrst.popart.filter.ImageFilter#applyFilter(java.awt
+   * .image.BufferedImage)
+   */
+  @Override
+  public BufferedImage applyFilter(BufferedImage image) {
+    BufferedImage result =
+        new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
 
-	private int alpha = 0;
+    for (int x = mLength; x < image.getWidth() - mLength; x++) {
+      for (int y = mLength; y < image.getHeight() - mLength; y++) {
+        result.setRGB(x, y, getRGB(x, y, image, matrix));
+      }
+    }
 
-	/**
-	 * Default constructor must be available!
-	 */
-	public BlurFilter() {
-		
-	}
+    for (int c = 0; c < result.getWidth(); c++) {
+      for (int i = 0; i < mLength; i++) {
+        result.setRGB(c, i, image.getRGB(c, 0));
+        result.setRGB(c, image.getHeight() - 1 - i,
+            image.getRGB(c, image.getHeight() - 1 - i));
+      }
+    }
+    for (int c = 0; c < result.getHeight(); c++) {
+      for (int i = 0; i < mLength; i++) {
+        result.setRGB(i, c, image.getRGB(0, c));
+        result.setRGB(image.getWidth() - 1 - i, c,
+            image.getRGB(image.getWidth() - 1 - i, c));
+      }
+    }
 
-	
-	/*
-	 * Method for Blur Filter. 
-	 * Each inner pixel is multiplied with weight matrix.
-	 * 
-	 * @param image Image to be filtered.
-	 * @return bufferedImage Image with filter.
-	 * 
-	 */
-	@Override
-	public BufferedImage applyFilter(BufferedImage image) {
+    return result;
+  }
 
-		BufferedImage bufferedImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+  private int getRGB(int x, int y, BufferedImage image, double[] matrix) {
 
-		float[][] weight = { 
-				{ 1 / 9f, 1 / 9f, 1 / 9f }, 
-				{ 1 / 9f, 1 / 9f, 1 / 9f }, 
-				{ 1 / 9f, 1 / 9f, 1 / 9f } };
+    int minX = x - (int) Math.floor(mLength);
+    int maxX = x + (int) Math.floor(mLength);
 
-		for (int x = 1; x < image.getWidth() - 2; x++) {
-			for (int y = 1; y < image.getHeight() - 2; y++) {
+    int minY = y - (int) Math.floor(mLength);
+    int maxY = y + (int) Math.floor(mLength);
 
-				for (int i = 0; i < weight.length; i++) {
-					for (int j = 0; j < weight[i].length; j++) {
-						calculate(image.getRGB((x - 1) + i, (y - 1) + j), weight[i][j]);
-					}
-				}
+    double r = 0;
+    double g = 0;
+    double b = 0;
+    double a = 0;
 
-				normalize();
+    int count = 0;
+    for (int xn = minX; xn <= maxX; xn++) {
+      for (int yn = minY; yn <= maxY; yn++) {
 
-				Color newColor = new Color(red, green, blue, alpha);
+        double mult = matrix[count++];
+        Color c = new Color(image.getRGB(xn, yn), true);
 
-				red = 0;
-				green = 0;
-				blue = 0;
+        a += c.getAlpha() * mult;
+        r += c.getRed() * mult;
+        g += c.getGreen() * mult;
+        b += c.getBlue() * mult;
+      }
+    }
 
-				bufferedImage.setRGB(x, y, newColor.getRGB());
-			}
-		} return bufferedImage;
-	}
+    a = Math.min(a, 255);
+    r = Math.min(r, 255);
+    g = Math.min(g, 255);
+    b = Math.min(b, 255);
 
-	/*
-	 * Calculates the red, green, blue values individually.
-	 * 
-	 * @param rgb RGB value of the pixel
-	 * @param weight Weight value of filter
-	 * 
-	 */
-	private void calculate(int rgb, float weight) {
-		Color color = new Color(rgb);
+    int rgb = 0;
+    if (image.getColorModel().hasAlpha()) {
+      rgb = new Color((int) r, (int) g, (int) b, (int) a).getRGB();
+    } else {
+      rgb = new Color((int) r, (int) g, (int) b).getRGB();
+    }
 
-		red += color.getRed() * weight;
-		green += color.getGreen() * weight;
-		blue += color.getBlue() * weight;
-
-		alpha += color.getAlpha() * weight;
-	}
-	
-	/*
-	 * Normalizes the values over the maximum and under the minimum value 
-	 * by turning into maximum and minimum value in the range.
-	 * 
-	 */
-	private void normalize() {
-		if (red < 0) {
-		    red = 0;
-		}
-		if (green < 0) {
-		    green = 0;
-		}
-		if (blue < 0) {
-		    blue = 0;
-		}
-		if (alpha < 0) {
-		    alpha = 0;
-		}
-
-
-
-		if (red > 255) {
-		    red = 255;
-		}
-		if (green > 255) {
-		    green = 255;
-		}
-		if (blue > 255) {
-		    blue = 255;
-		}
-		if (alpha > 255) {
-		    alpha = 255;
-		}
-	}
+    return rgb;
+  }
 }

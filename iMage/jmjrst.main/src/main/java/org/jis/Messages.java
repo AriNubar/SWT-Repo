@@ -47,10 +47,14 @@ public class Messages implements Serializable {
    *          the message key
    * @return returns the message of the specified language
    */
-  public String getString(String key) {
-    try {
+  public String getString(String key)
+  {
+    try
+    {
       return RESOURCE_BUNDLE.getString(key);
-    } catch (MissingResourceException e) {
+    }
+    catch (MissingResourceException e)
+    {
       e.printStackTrace();
       return '!' + key + '!';
     }

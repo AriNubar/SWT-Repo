@@ -719,11 +719,14 @@ public class Generator {
 
   public BufferedImage rotateImage(BufferedImage image, double rotate)
   {
-    if (rotate == 0) return image;
-    
-    if (image == null) {
-    	throw new NullPointerException("Null images cannot be rotated.");
-    }
+	  if (rotate == 0) return image;
+	  
+	  /**
+	   * Sommersemester 2016, Übungsblatt 1, Aufgabe 2 f)
+	   */
+	  if (image == null) {
+		  throw new IllegalArgumentException("Image must not be null when calling rotateImage(..)");
+	  }
 
     AffineTransform transform = new AffineTransform();
 

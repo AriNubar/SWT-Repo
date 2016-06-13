@@ -1,47 +1,57 @@
 package org.iMage.edge.detection.sobel.filter;
 
 import java.awt.image.BufferedImage;
-import java.awt.Color;
-
+import java.awt.image.Raster;
+import java.awt.image.WritableRaster;
 
 import org.iMage.edge.detection.base.ImageFilter;
 
 /**
  * Implements the GrayScaleFilter as requested on worksheet 2.
+ *
+ * @author Mathias Landhäußer (swt1@ipd.kit.edu)
+ * @version 1.0
  */
 public class GrayScaleFilter implements ImageFilter {
 
-	/** Default constructor must be available! */
-	public GrayScaleFilter() {
-
-	}
-
-	/*
-	 * Method for Gray Filter. In each case, the average of RGB values of a
-	 * pixel are calculated and this value is set in all RGB values.
-	 * 
-	 * @param image Image to be filtered.
-	 * 
-	 */
-
 	@Override
 	public BufferedImage applyFilter(BufferedImage image) {
-		
-		BufferedImage bufferedImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+		BufferedImage resultImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+		WritableRaster resultRaster = resultImage.getRaster();
 
-			for (int i = 0; i < bufferedImage.getHeight(); i++) {
-				for (int j = 0; j < bufferedImage.getWidth(); j++) {
-					Color a = new Color(image.getRGB(j, i));
-					final int red = a.getRed();
-					final int green = a.getGreen();
-					final int blue = a.getBlue();
-					final int alpha = a.getAlpha();
-					final int average = ((red + green + blue) / 3);
+		int w = image.getWidth();
+		int h = image.getHeight();
 
-					Color newColor = new Color(average, average, average, alpha);
-					bufferedImage.setRGB(j, i, newColor.getRGB());
-				}
-			}
-		return bufferedImage;
+		Raster raster = image.getRaster();
+
+		int bandwidth = (image.getColorModel().hasAlpha()) ? 4 : 3;
+
+		// We need 3 or 4 integers (for R,G,B color values and possibly an
+		// alpha channel) per pixel.
+		int[] pixels = new int[w * h * bandwidth];
+
+		// copy the source image's pixels to the pixels array
+		raster.getPixels(0, 0, w, h, pixels);
+
+		// Process 3 or 4 ints at a time for each pixel.
+		// Each pixel has 3 RGB colors in array; the alpha channel should stay intact
+		for (int i = 0; i < pixels.length; i += bandwidth) {
+			int r = pixels[i];
+			int g = pixels[i + 1];
+			int b = pixels[i + 2];
+
+			int gry = (r + g + b) / 3;
+			r = gry;
+			g = gry;
+			b = gry;
+
+			pixels[i] = r;
+			pixels[i + 1] = g;
+			pixels[i + 2] = b;
+		}
+
+		resultRaster.setPixels(0, 0, w, h, pixels);
+
+		return resultImage;
 	}
 }
